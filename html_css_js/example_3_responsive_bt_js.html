@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <script>
+  function showMessage(){
+    var email = document.getElementById("exampleFormControlInput1").value;
+    alert("Your email is: " + email);
+  }
+  </script>
+  <body>
+    <h2>Responsive Form</h2>
+    <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <form action="#">
+            <div class="form-group row">
+              <label for="exampleFormControlInput1"class="col-sm-2 col-form-label">Email address</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label">Country</label>
+              <div class="col-sm-10">
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Australia</option>
+                  <option>Canada</option>
+                  <option>USA</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="exampleFormControlSelect2" class="col-sm-2 col-form-label">Country</label>
+              <div class="col-sm-10">
+                <select multiple class="form-control" id="exampleFormControlSelect2">
+                  <option>Australia</option>
+                  <option>Canada</option>
+                  <option>USA</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Subject</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write something here"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="showMessage()">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
