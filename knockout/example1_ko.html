@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js"></script>
+    <script>
+      function ViewModel(){
+        var nombre = ko.observable();
+      }
+      ko.applyBindings(new ViewModel(), document.getElementById('applicacion'));
+    </script>
+  </head>
+
+  <body>
+    <div id="applicacion">
+      <input data-bind="value: nombre" />
+      <div data-bind="text: nombre">
+      </div>
+    </div>
+  </body>
+</html>
