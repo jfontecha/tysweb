@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js"></script>
+    <script>
+      function ViewModel(){
+        var self = this;
+        self.firstName = ko.observable("default first");
+        self.lastName = ko.observable("default last");
+        self.response = ko.observable(null);
+        self.onSubmit = function(){
+          var data = JSON.stringify({
+                first : self.firstName(), last : self.lastName()
+              });
+          $.post("/echo/json", data, function(response){
+            // on success callback
+            self.response(response);
+          })
+        }
+      }
+      ko.applyBindings(new ViewModel(), document.getElementById('applicacion');
+    </script>
+  </head>
+
+  <body>
+    <div id="applicacion">
+      <form data-bind="submit: onSubmit">
+        <input data-bind="value : firstName"/>
+        <input data-bind="value : lastName"/>
+        <input type="submit" text="Submit!"/>
+      </form>
+      Response: <span data-bind="text : response"></span>
+  </body>
+</html>
