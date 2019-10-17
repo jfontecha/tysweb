@@ -28,6 +28,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
+            <a class="nav-link" href="#">Crear partida</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#">Unirse a partida</a>
           </li>
           <li class="nav-item">
@@ -39,10 +42,47 @@
     <!-- CONTENEDOR GENERAL -->
     <div class="container">
       <div class="row">
-        
+
         <!-- COLUMNA 1 DEL GRID -->
         <div class="col-4">
-          Columna 1 grid
+          <div class="container">
+            <!-- FILA COMPONENTES TIEMPO Y PUNTUACIONES -->
+            <div class="row border border-primary">
+              <div class="col-4">
+                <span>Tiempo restante</span>
+              </div>
+              <div class="col-8">
+                <span>Componente puntuaciones</span>
+              </div>
+            </div>
+            <!-- FILA COMPONENTES FICHAS JUGADOR -->
+            <div class="row border border-primary">
+              <div class="col-12">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td style="padding: 4px;"><img src="./img/letters/s-letter.png"/></td>
+                      <td style="padding: 4px;"><img src="./img/letters/s-letter.png"/></td>
+                      <td style="padding: 4px;"><img src="./img/letters/s-letter.png"/></td>
+                      <td style="padding: 4px;"><img src="./img/letters/s-letter.png"/></td>
+                      <td style="padding: 4px;"><img src="./img/letters/s-letter.png"/></td>
+                      <td style="padding: 4px;"><img src="./img/letters/s-letter.png"/></td>
+                      <td style="padding: 4px;"><img src="./img/letters/s-letter.png"/></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- FILA COMPONENTES BOTONES JUGADAS -->
+            <div class="row border border-primary">
+              <div class="col-3">
+                <button type="button" class="btn btn-primary">Jugar</button>
+              </div>
+              <div class="col-3">
+                <button type="button" class="btn btn-primary">Pasar</button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- COLUMNA 2 DEL GRID -->
